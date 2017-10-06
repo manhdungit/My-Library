@@ -39,8 +39,8 @@ float doigiatri (float &a, float &b)
 }
 
 //tinh cos
-float tinhcos(float, float, float, char);
-float tinhcos(float a, float b, float c, char goc)
+float cos_of(float, float, float, char);
+float cos_of(float a, float b, float c, char goc)
 {
 	if (goc == 'A')
 	{
