@@ -3,7 +3,7 @@
 #include <math.h>
 using namespace std;
 
-
+/*Function1*/
 int ak(long int, int);
 int ak(long int n, int k)
 {
@@ -13,7 +13,7 @@ int ak(long int n, int k)
 	return s;
 }
 
-
+/*Function2*/
 int factorial(int n);
 int factorial(int n)
 {
@@ -21,7 +21,7 @@ int factorial(int n)
 	for (int i = 1; i <= n; i++) s *= i;
 	return(s);
 }
-
+/*Function3*/
 int number_of_digit(long int);
 int number_of_digit(long int n)
 {
@@ -33,14 +33,14 @@ int number_of_digit(long int n)
 	}
 	return i;
 }
-
+/*Function4*/
 void swap(float &a, float &b)
 {
 	float temp = a;
 	a = b;
 	b = temp;
 }
-
+/*Function5*/
 //tinh cos
 float cos_of(float, float, float, char);
 float cos_of(float a, float b, float c, char goc)
@@ -65,6 +65,7 @@ float cos_of(float a, float b, float c, char goc)
 	}
 }
 
+/*Function6*/
 /* So nguyen to */
 
 bool number_of_argument(int n)
@@ -78,6 +79,7 @@ bool number_of_argument(int n)
 	return 1;
 }
 
+/*Function7*/
 /* So chu so */
 int number_of_numbers(long int n)
 {
@@ -92,6 +94,7 @@ int number_of_numbers(long int n)
 	return count;
 }
 
+/*Function8*/
 /*So uoc so*/
 int number_of_divisor(int n)
 {
@@ -108,6 +111,7 @@ int number_of_divisor(int n)
 	return counting;
 }
 
+/*Function9*/
 /*Uoc chung lon nhat*/
 int GCD(int a, int b)
 {
@@ -136,11 +140,10 @@ int GCD(int a, int b)
 	return a1;
 }
 
+/*Function10*/
 /*Nhap mang*/
-void nhapmang(int *A, int &n)
+void nhapmang(int *A, int n)
 {
-	cout << "Nhap so phan tu cua mang: ";
-	cin >> n;
 	for (int i = 0; i < n; i++)
 	{
 		cout << "A[" << i << "] = ";
@@ -148,6 +151,7 @@ void nhapmang(int *A, int &n)
 	}
 }
 
+/*Function11*/
 /*Xuat mang*/
 void xuatmang(int *A, int n)
 {
@@ -159,7 +163,7 @@ void xuatmang(int *A, int n)
 }
 
 
-
+/*Function12*/
 /*Nhap vao ngay/thang/nam xuat ra ngay do la thu gi*/
 void tim_thu_cua_ngay(int dd, int mm, int yy)
 {
@@ -237,4 +241,14 @@ void tim_thu_cua_ngay(int dd, int mm, int yy)
 		break;
 	}
 	}
+}
+
+/*Function13*/
+/* So phan tu mang gia tri n trong mang */
+int n_elements_array(int i, int *A, int n)
+{
+	int dem = 0;
+	for (int j = 0; j < n; j++)
+		if (*(A + j) == *(A + i)) dem++;
+	return dem;
 }
