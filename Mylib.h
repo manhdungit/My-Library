@@ -11,16 +11,16 @@ int ak(long int n, int k)
 }
 
 
-int giaithua(int n);
-int giaithua(int n)
+int factorial(int n);
+int factorial(int n)
 {
 	int s = 1;
 	for (int i = 1; i <= n; i++) s *= i;
 	return(s);
 }
 
-int sochuso(long int);
-int sochuso(long int n)
+int number_of_digit(long int);
+int number_of_digit(long int n)
 {
 	int i = 1;
 	while (n > 9)
@@ -31,7 +31,7 @@ int sochuso(long int n)
 	return i;
 }
 
-float doigiatri (float &a, float &b)
+float swap (float &a, float &b)
 {
 	float temp = a;
 	a = b;
@@ -54,4 +54,31 @@ float cos_of(float a, float b, float c, char goc)
 	{
 		return (a*a + b*b - c*c) / (2 * a*b);
 	}
+}
+
+/* So nguyen to */
+
+bool number_of_argument(int n)
+{
+	if (n == 1) return 0;
+	if (n == 2) return 1;
+	for (int i = 2; i < n; i++)
+	{
+		if (n%i == 0) return 0;
+	}
+	return 1;
+}
+
+/* So chu so */
+int number_of_numbers(long int n)
+{
+	if (n < 0) n = -n;
+	if (n == 0) return 1;
+	int count = 0;
+	while (n > 0)
+	{
+		count++;
+		n /= 10;
+	}
+	return count;
 }
