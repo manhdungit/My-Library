@@ -98,3 +98,31 @@ int number_of_divisor(int n)
 	}
 	return counting;
 }
+
+/*Uoc chung lon nhat*/
+int GCD(int a, int b)
+{
+	int a1, b1, UCLN, temp;
+	a1 = abs(a);
+	b1 = abs(b);
+	if (a == 0 || b == 0)
+	{
+		UCLN = a1 + b1;
+		if (UCLN == 0)
+		{
+			return 0;
+		}
+		else
+		{
+			return UCLN;
+		}
+	}
+	while (b1 != 0)
+	{
+		temp = a1%b1;
+		a1 = b1;
+		b1 = temp;
+	}
+	UCLN = a1;
+	return a1;
+}
