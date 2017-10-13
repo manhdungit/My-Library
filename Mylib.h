@@ -157,3 +157,84 @@ void xuatmang(int *A, int n)
 		cout << "A[" << i << "] = " << A[i] << endl;
 	}
 }
+
+
+
+/*Nhap vao ngay/thang/nam xuat ra ngay do la thu gi*/
+void tim_thu_cua_ngay(int dd, int mm, int yy)
+{
+	int thu, ngay, i, j;
+	ngay = 0, thu = 0, j = 0, i = 1;
+	for (i = 1; i <= mm - 1; i++)
+	{
+		switch (i)
+		{
+		case 2:
+		{
+			if ((yy % 400 == 0) || (yy % 4 == 0 && yy % 100 != 0)) ngay += 29;
+			else ngay += 28;
+			break;
+		}
+		case 4:
+		case 6:
+		case 9:
+		case 11:
+		{
+			ngay += 30;
+			break;
+		}
+		default:
+		{
+			ngay += 31;
+			break;
+		}
+		}
+	}
+	ngay += dd;
+	ngay += (yy - 1) * 365;
+	i = 4;
+	while (i < yy)
+	{
+		if (i % 400 == 0 || i % 4 == 0 && i % 100 != 0) ngay += 1;
+		i += 4;
+	}
+	thu = (ngay + 1) % 7;
+	switch (thu)
+	{
+	case 1:
+	{
+		cout << "Sunday";
+		break;
+	}
+	case 2:
+	{
+		cout << "Monday";
+		break;
+	}
+	case 3:
+	{
+		cout << "Tuesday";
+		break;
+	}
+	case 4:
+	{
+		cout << "Wednesday";
+		break;
+	}
+	case 5:
+	{
+		cout << "Thursday";
+		break;
+	}
+	case 6:
+	{
+		cout << "Friday";
+		break;
+	}
+	case 0:
+	{
+		cout << "Saturday";
+		break;
+	}
+	}
+}
