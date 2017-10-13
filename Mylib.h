@@ -1,6 +1,8 @@
 #pragma once
 #include <math.h>
 #include <iostream>
+
+
 int ak(long int, int);
 int ak(long int n, int k)
 {
@@ -125,4 +127,26 @@ int GCD(int a, int b)
 	}
 	UCLN = a1;
 	return a1;
+}
+
+/*Nhap mang*/
+void nhapmang(int *A, int &n)
+{
+	cout << "Nhap so phan tu cua mang: ";
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cout << "A[" << i << "] = ";
+		cin >> A[i];
+	}
+}
+
+/*Xuat mang*/
+void xuatmang(int *A, int n)
+{
+	cout << "Gia tri cac phan tu la: "<<endl;
+	for (int i = 0; i < n; i++)
+	{
+		cout << "A[" << i << "] = " << A[i]<<endl;
+	}
 }
