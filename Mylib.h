@@ -1,6 +1,7 @@
 #pragma once
+#include<iostream>
 #include <math.h>
-#include <iostream>
+using namespace std;
 
 
 int ak(long int, int);
@@ -33,7 +34,7 @@ int number_of_digit(long int n)
 	return i;
 }
 
-float swap (float &a, float &b)
+void swap(float &a, float &b)
 {
 	float temp = a;
 	a = b;
@@ -48,13 +49,19 @@ float cos_of(float a, float b, float c, char goc)
 	{
 		return (b*b + c*c - a*a) / (2 * b*c);
 	}
-	if (goc == 'B')
+	else
 	{
-		return (a*a + c*c - b*b) / (2 * a*c);
-	}
-	if (goc == 'C')
-	{
-		return (a*a + b*b - c*c) / (2 * a*b);
+		if (goc == 'B')
+		{
+			return (a*a + c*c - b*b) / (2 * a*c);
+		}
+		else
+		{
+			if (goc == 'C')
+			{
+				return (a*a + b*b - c*c) / (2 * a*b);
+			}
+		}
 	}
 }
 
@@ -144,9 +151,9 @@ void nhapmang(int *A, int &n)
 /*Xuat mang*/
 void xuatmang(int *A, int n)
 {
-	cout << "Gia tri cac phan tu la: "<<endl;
+	cout << "Gia tri cac phan tu la: " << endl;
 	for (int i = 0; i < n; i++)
 	{
-		cout << "A[" << i << "] = " << A[i]<<endl;
+		cout << "A[" << i << "] = " << A[i] << endl;
 	}
 }
