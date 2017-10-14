@@ -318,5 +318,68 @@ void sapdaygiamtu(int *A, int n, int x)
 			if (A[i] < A[i + 1]) traodoigiatri(A[i], A[i + 1]);
 		}
 	}
+}
 
+void phanmangchanle(int *A, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			if (A[i] % 2 == 0)
+			{
+				traodoigiatri(*(A + i), *(A + j));
+			}
+		}
+	}
+}
+
+
+/*
+cout << "Nhap kich thuoc m x n cua ma tran: ";
+int m, n;
+cin >> m >> n;
+float *mat;
+mat = new float[m*n];
+*/
+void cin_mat(float *mat, int n)
+{
+	cout << "Nhap vao ma tran kich thuoc " << n << "x" << n << endl;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			//cout << "A[" << i << "]" << "[" << j << "] = ";
+			cin >> *(mat + i*n + j);
+		}
+
+	}
+	cout << "\n";
+}
+void cin_mat(int *mat, int n)
+{
+	cout << "Nhap vao ma tran kich thuoc " << n << "x" << n << endl;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			//cout << "A[" << i << "]" << "[" << j << "] = ";
+			cin >> *(mat + i*n + j);
+		}
+
+	}
+	cout << "\n";
+}
+
+void cout_mat(float *mat, int n)
+{
+	cout << "Solution: " << endl;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cout << " " << *(mat + i*n + j) << " ";
+		}
+		cout << endl;
+	}
 }
