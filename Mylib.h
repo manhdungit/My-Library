@@ -1,6 +1,7 @@
 #pragma once
 
 /*Function1*/
+// Doc chu so thu k cua so n
 int ak(long int, int);
 
 /*Function2*/
@@ -76,3 +77,21 @@ void sapdaygiam(int *A, int n);
 /*Function21*/
 void sapdaygiamtu(int *A, int n, int x);
 /*x la phan tu thu x*/
+
+/*Function22*/
+void phanmangchanle(int*, int);
+
+/*Function23*/
+void cin_mat(float *mat, int n);
+void cin_mat(int *mat, int n);
+
+/*Function24*/
+void cout_mat(float *mat, int n);
+
+/*Function22*/
+/*Function22*/
+/*Function22*/
+/*Function22*/
+/*Function22*/
+/*Function22*/
+/*Function22*/
