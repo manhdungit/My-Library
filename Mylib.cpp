@@ -27,7 +27,7 @@ int number_of_digit(long int n)
 	}
 	return i;
 }
-
+// Trao doi gia tri
 void traodoigiatri(float &a, float &b)
 {
 	float temp = a;
@@ -40,7 +40,14 @@ void traodoigiatri(int &a, int &b)
 	a = b;
 	b = temp;
 }
+void traodoigiatri(double &a, double &b)
+{
+	double temp = a;
+	a = b;
+	b = temp;
+}
 
+// Tinh cos
 float cos_of(float a, float b, float c, char goc)
 {
 	if (goc == 'A')
@@ -381,5 +388,42 @@ void cout_mat(float *mat, int n)
 			cout << " " << *(mat + i*n + j) << " ";
 		}
 		cout << endl;
+	}
+}
+
+
+void mat_t(int *mat, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			traodoigiatri(*(mat + i*n + j), *(mat + j*n + i));
+		}
+	}
+}
+
+
+void mat_t(float *mat, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			traodoigiatri(*(mat + i*n + j), *(mat + j*n + i));
+		}
+	}
+}
+
+
+
+void mat_t(double *mat, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			traodoigiatri(*(mat + i*n + j), *(mat + j*n + i));
+		}
 	}
 }
