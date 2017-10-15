@@ -11,8 +11,9 @@ int factorial(int n);
 int number_of_digit(long int);
 
 /*Function4*/
-void traodoigiatri(float &a, float &b);
 void traodoigiatri(int &a, int &b);
+void traodoigiatri(float &a, float &b);
+void traodoigiatri(double &a, int &b);
 /*Function5*/
 //tinh cos
 float cos_of(float, float, float, char);
@@ -89,6 +90,9 @@ void cin_mat(int *mat, int n);
 void cout_mat(float *mat, int n);
 
 /*Function22*/
+void mat_t(int *mat, int n);
+void mat_t(float *mat, int n);
+void mat_t(double *mat, int n);
 /*Function22*/
 /*Function22*/
 /*Function22*/
