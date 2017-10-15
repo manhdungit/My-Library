@@ -88,11 +88,11 @@ void cin_mat(int *mat, int n);
 
 /*Function24*/
 void cout_mat(float *mat, int n);
+void cout_mat(int *mat, int n);
 
 /*Function22*/
 void mat_t(int *mat, int n);
 void mat_t(float *mat, int n);
-void mat_t(double *mat, int n);
 /*Function22*/
 /*Function22*/
 /*Function22*/
