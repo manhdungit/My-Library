@@ -1,7 +1,7 @@
 #include<iostream>
 #include <math.h>
 using namespace std;
-
+/*Function1*/
 int ak(long int n, int k)
 {
 	long int s;
@@ -9,6 +9,7 @@ int ak(long int n, int k)
 	s = s % 10;
 	return s;
 }
+/*Function2*/
 
 int factorial(int n)
 {
@@ -16,7 +17,7 @@ int factorial(int n)
 	for (int i = 1; i <= n; i++) s *= i;
 	return(s);
 }
-
+/*Function3*/
 int number_of_digit(long int n)
 {
 	int i = 1;
@@ -27,6 +28,8 @@ int number_of_digit(long int n)
 	}
 	return i;
 }
+/*Function4*/
+
 // Trao doi gia tri
 void traodoigiatri(float &a, float &b)
 {
@@ -47,6 +50,7 @@ void traodoigiatri(double &a, double &b)
 	b = temp;
 }
 
+/*Function5*/
 // Tinh cos
 float cos_of(float a, float b, float c, char goc)
 {
@@ -70,6 +74,7 @@ float cos_of(float a, float b, float c, char goc)
 	}
 }
 
+/*Function6*/
 bool number_of_argument(int n)
 {
 	if (n == 1) return 0;
@@ -81,6 +86,8 @@ bool number_of_argument(int n)
 	return 1;
 }
 
+/*Function7*/
+/* So chu so */
 int number_of_numbers(long int n)
 {
 	if (n < 0) n = -n;
@@ -253,7 +260,7 @@ bool KTdaytang(int *A, int n)
 bool KTdaytangtu(int *A, int n, int x)
 {
 	bool tm = 0;
-	for (int i = x-1; i < n - 1; i++)
+	for (int i = x - 1; i < n - 1; i++)
 	{
 		if (A[i] > A[i + 1]) return 0;
 	}
@@ -273,7 +280,7 @@ bool KTdaygiam(int *A, int n)
 bool KTdaygiamtu(int *A, int n, int x)
 {
 	bool tm = 0;
-	for (int i = x-1; i < n - 1; i++)
+	for (int i = x - 1; i < n - 1; i++)
 	{
 		if (A[i] < A[i + 1]) return 0;
 	}
@@ -296,7 +303,7 @@ void sapdaytangtu(int *A, int n, int x)
 {
 	while (KTdaytangtu(A, n, x) == 0)
 	{
-		for (int i = x-1; i < n - 1; i++)
+		for (int i = x - 1; i < n - 1; i++)
 		{
 			if (A[i] > A[i + 1]) traodoigiatri(A[i], A[i + 1]);
 		}
@@ -320,7 +327,7 @@ void sapdaygiamtu(int *A, int n, int x)
 {
 	while (KTdaygiamtu(A, n, x) == 0)
 	{
-		for (int i = x-1; i < n - 1; i++)
+		for (int i = x - 1; i < n - 1; i++)
 		{
 			if (A[i] < A[i + 1]) traodoigiatri(A[i], A[i + 1]);
 		}
@@ -377,7 +384,7 @@ void cin_mat(int *mat, int n)
 	}
 	cout << "\n";
 }
-
+//Xuat ma tran cout_mat
 void cout_mat(float *mat, int n)
 {
 	cout << "Solution: " << endl;
@@ -385,13 +392,25 @@ void cout_mat(float *mat, int n)
 	{
 		for (int j = 0; j < n; j++)
 		{
-			cout << " " << *(mat + i*n + j) << " ";
+			cout << *(mat + i*n + j) << "	";
+		}
+		cout << endl;
+	}
+}
+void cout_mat(int *mat, int n)
+{
+	cout << "Solution: " << endl;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cout << *(mat + i*n + j) << "	";
 		}
 		cout << endl;
 	}
 }
 
-
+//Mat tran chuyen vi
 void mat_t(int *mat, int n)
 {
 	for (int i = 0; i < n; i++)
@@ -405,19 +424,6 @@ void mat_t(int *mat, int n)
 
 
 void mat_t(float *mat, int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = i + 1; j < n; j++)
-		{
-			traodoigiatri(*(mat + i*n + j), *(mat + j*n + i));
-		}
-	}
-}
-
-
-
-void mat_t(double *mat, int n)
 {
 	for (int i = 0; i < n; i++)
 	{
