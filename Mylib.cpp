@@ -433,3 +433,68 @@ void mat_t(float *mat, int n)
 		}
 	}
 }
+
+/*Function25*/
+/*Gia tri lon nhat cua mang*/
+int max_array(int *A, int n)
+{
+	int max = *A;
+	for (int i = 0; i < n; i++)
+	{
+		if (*(A + i) > max) max = *(A + i);
+	}
+	return max;
+}
+float max_array(float *A, int n)
+{
+	float max = *A;
+	for (int i = 0; i < n; i++)
+	{
+		if (*(A + i) > max) max = *(A + i);
+	}
+	return max;
+}
+/*Function22*/
+/*Gia tri nho nhat cua mang*/
+int min_array(int *A, int n)
+{
+	int min = *A;
+	for (int i = 0; i < n; i++)
+	{
+		if (*(A + i) < min) min = *(A + i);
+	}
+	return min;
+}
+float min_array(float *A, int n)
+{
+	float min = *A;
+	for (int i = 0; i < n; i++)
+	{
+		if (*(A + i) < min) min = *(A + i);
+	}
+	return min;
+}
+/*Function27*/
+bool KiemtraNcochiahetchomang(int *A, int n, int N)
+
+{
+	for (int i = 0; i < n; i++)
+	{
+		if (N%A[i] != 0) return false;
+	}
+	return true;
+}
+/*Function28*/
+int uocnguyetolonnhat(int n)
+{
+	int maxuoc = -1;
+	for (int i = 2; i <= n; i++)
+	{
+		while (n%i == 0)
+		{
+			maxuoc = i;
+			n /= i;
+		}
+	}
+	return maxuoc;
+}
