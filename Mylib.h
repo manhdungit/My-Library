@@ -90,12 +90,22 @@ void cin_mat(int *mat, int n);
 void cout_mat(float *mat, int n);
 void cout_mat(int *mat, int n);
 
-/*Function22*/
+/*Function25*/
 void mat_t(int *mat, int n);
 void mat_t(float *mat, int n);
-/*Function22*/
-/*Function22*/
-/*Function22*/
-/*Function22*/
+/*Function25*/
+/*Gia tri lon nhat cua mang*/
+int max_array(int *A, int n);
+float max_array(float *A, int n);
+
+/*Function26*/
+/*Gia tri nho nhat cua mang*/
+int min_array(int *A, int n);
+float min_array(float *A, int n);
+/*Function27*/
+bool KiemtraNcochiahetchomang(int *A, int n, int N);
+/*Function28*/
+/*Uoc nguyen to lon nhat*/
+int uocnguyetolonnhat(int n);
 /*Function22*/
 /*Function22*/
