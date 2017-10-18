@@ -142,7 +142,7 @@ int GCD(int a, int b)
 	UCLN = a1;
 	return a1;
 }
-
+//Function
 void nhapmang(int *A, int n)
 {
 	for (int i = 0; i < n; i++)
@@ -151,7 +151,16 @@ void nhapmang(int *A, int n)
 		cin >> A[i];
 	}
 }
+void nhapmang(float *A, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << "A[" << i << "] = ";
+		cin >> A[i];
+	}
+}
 
+//Function
 void xuatmang(int *A, int n)
 {
 	cout << "Gia tri cac phan tu la: " << endl;
