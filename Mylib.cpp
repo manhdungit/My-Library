@@ -159,6 +159,14 @@ void nhapmang(float *A, int n)
 		cin >> A[i];
 	}
 }
+void nhapmang(bool *A, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << "A[" << i << "] = ";
+		cin >> A[i];
+	}
+}
 
 //Function
 void xuatmang(int *A, int n)
