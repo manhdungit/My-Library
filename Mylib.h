@@ -39,6 +39,7 @@ int GCD(int a, int b);
 /*Nhap mang*/
 void nhapmang(int *A, int n);
 void nhapmang(float *A, int n);
+void nhapmang(bool *A, int n);
 
 
 /*Function11*/
